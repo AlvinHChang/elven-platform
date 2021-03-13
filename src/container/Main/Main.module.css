@@ -1,0 +1,47 @@
+
+.container {
+    --nav-strip-size: 100px;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: var(--nav-strip-size) auto;
+    grid-column-margin: 2px;
+}
+
+.navStrip {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #282c34;
+    border-width: 0;
+}
+
+.navStripButton {
+    --button-padding: 10px;
+    margin: calc(var(--button-padding) / 2) var(--button-padding);
+    padding: 0;
+    height: calc(var(--nav-strip-size) - 2 * var(--button-padding));
+    width: calc(var(--nav-strip-size) - 2 * var(--button-padding));
+    background-color: #3b383b;
+    color: white;
+    border-color: white;
+    border-width: 0px;
+    border-radius: 10px;
+}
+
+.navStripButton:first-child {
+    margin-top: var(--button-padding);
+}
+
+.navStripButton:last-child {
+    margin-bottom: var(--button-padding);
+}
+
+.mainContent {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #282c34;
+}
